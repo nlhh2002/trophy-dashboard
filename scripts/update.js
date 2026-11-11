@@ -5,7 +5,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_FILE = path.join(ROOT, "config", "players.json");
 const DATA_FILE = path.join(ROOT, "docs", "data", "players.json");
 const API_BASE = "https://cocproxy.royaleapi.dev/v1";
-const VALID_TAG = /^#?[0289CGJLPQRUV]+$/i;
+const VALID_TAG = /^#?[0289PYLQGRJCUV]+$/i;
 
 function normalizeTag(input) {
   let tag = String(input || "").trim().toUpperCase().replace(/\s+/g, "");
