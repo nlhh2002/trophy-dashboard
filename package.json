@@ -1,0 +1,12 @@
+{
+  "name": "coc-trophy-dashboard",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Static Clash of Clans Home Village trophy dashboard updated by GitHub Actions",
+  "scripts": {
+    "update": "node scripts/update.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<title>Trophy Dashboard | Clash of Clans</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#141c2e;--panel2:#1c2940;--line:#2a3852;--muted:#91a0b8;--text:#f4f7fb;--gold:#f4c75e;--green:#55d69e;--red:#ff7c83}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b2943 0,#0b1020 55%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);min-height:100vh}
+.wrap{width:min(1100px,calc(100% - 32px));margin:0 auto;padding:34px 0 60px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#f5d477,#b77c26);display:grid;place-items:center;color:#182033;font-size:24px;font-weight:900;box-shadow:0 8px 30px #0005}
+.eyebrow{font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:800}.brand h1{font-size:19px;margin:3px 0 0;letter-spacing:.6px}
+.live{border:1px solid #287b60;color:#7ce0b5;background:#153b32;border-radius:99px;padding:7px 11px;font-size:11px;font-weight:800;letter-spacing:1px}
+.hero{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:34px 0 22px}.hero h2{font-size:clamp(30px,5vw,48px);line-height:1;margin:0 0 10px;letter-spacing:-1.5px}.hero p{margin:0;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.stat,.board,.admin{background:linear-gradient(145deg,#18243a,#111a2b);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 40px #0002}
+.stat{padding:17px}.stat label{display:block;color:var(--muted);font-size:10px;letter-spacing:1.4px;font-weight:800}.stat strong{display:block;font-size:27px;margin-top:7px;font-variant-numeric:tabular-nums}
+.board{overflow:hidden}.board-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.board-head h3{margin:0;font-size:15px;letter-spacing:.5px}.board-head span{font-size:12px;color:var(--muted)}
+.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:580px}th{text-align:left;color:var(--muted);font-size:10px;letter-spacing:1.2px;padding:14px 18px;background:#10192a}td{padding:15px 18px;border-top:1px solid #25334a;font-size:14px}tr:hover td{background:#ffffff06}.rank{font-weight:900;color:#aab8ce;width:65px}.rank.top1{color:var(--gold)}.player{display:flex;align-items:center;gap:11px;font-weight:750}.avatar{width:34px;height:34px;border-radius:11px;background:#263754;display:grid;place-items:center;color:#c6d4e9;font-size:12px}.tag{font-size:11px;color:var(--muted);font-weight:500;margin-top:3px}.trophies{font-weight:850;font-size:16px;font-variant-numeric:tabular-nums}.league{color:#d5c18c}.status{font-size:11px;color:var(--green)}.status.stale,.status.error{color:var(--red)}
+.empty{padding:44px 20px;text-align:center;color:var(--muted)}.empty b{display:block;color:var(--text);font-size:16px;margin-bottom:8px}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px;padding:14px 4px}
+.admin{margin-top:20px;padding:18px}.admin summary{cursor:pointer;font-weight:800;font-size:13px}.admin p{font-size:12px;color:var(--muted);line-height:1.6}.fields{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:14px 0}.field label{display:block;color:var(--muted);font-size:10px;margin:0 0 5px}.field input,.key{width:100%;background:#0d1525;border:1px solid #34445f;border-radius:9px;color:white;padding:11px;font:inherit;font-size:13px;outline:none}.field input:focus,.key:focus{border-color:var(--gold)}
+.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:800;cursor:pointer;background:var(--gold);color:#1b2230}.btn.secondary{background:#293750;color:#e6edf8}.btn:disabled{opacity:.55;cursor:wait}.message{font-size:12px;margin-top:10px;color:var(--green)}.message.bad{color:var(--red)}
+@media(max-width:640px){.wrap{width:min(100% - 22px,1100px);padding-top:20px}.hero{display:block}.live{font-size:10px}.stats{gap:8px}.stat{padding:13px}.stat strong{font-size:21px}.fields{grid-template-columns:1fr}.board-head{padding:15px}.hero h2{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><div class="logo">🏆</div><div><div class="eyebrow">CLASH OF CLANS</div><h1>TROPHY TRACKER</h1></div></div>
+  <div class="live">● PUBLIC DASHBOARD</div>
+</header>
+<section class="hero">
+  <div><h2>TOP 10 PLAYERS</h2><p>Home Village · Public leaderboard · Automatically synchronized twice daily</p></div>
+</section>
+<section class="stats">
+  <div class="stat"><label>TRACKED PLAYERS</label><strong id="count">0 / 10</strong></div>
+  <div class="stat"><label>HIGHEST TROPHIES</label><strong id="highest">—</strong></div>
+  <div class="stat"><label>LAST SYNC</label><strong id="updated" style="font-size:16px">Waiting</strong></div>
+</section>
+<section class="board">
+  <div class="board-head"><h3>🏅 PLAYER RANKING</h3><span id="refreshText">Schedule: 11:55 & 23:55 (Vietnam)</span></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>RANK</th><th>PLAYER</th><th>LEAGUE</th><th>🏆 TROPHIES</th><th>SYNC</th></tr></thead>
+    <tbody id="rows"><tr><td colspan="5"><div class="empty"><b>Dashboard is ready</b>Chưa có Player Tag. Quản trị viên có thể mở phần cấu hình bên dưới.</div></td></tr></tbody>
+  </table></div>
+</section>
+<div class="foot"><span id="statusText">Đang tải dữ liệu…</span><span>Data source: Clash of Clans API · RoyaleAPI Proxy</span></div>
+
+<!-- STATIC_PUBLIC_DASHBOARD -->
+<details class="admin" style="display:none">
+  <summary>⚙ ADMIN · Configure 10 Player Tags</summary>
+  <p>Chỉ người có ADMIN_KEY mới lưu được danh sách. Mã quản trị được gửi trực tiếp tới backend qua HTTPS; không đặt Supercell API token tại đây.</p>
+  <label style="display:block;font-size:11px;color:var(--muted);margin:12px 0 6px">ADMIN KEY</label>
+  <input class="key" id="adminKey" type="password" autocomplete="off" placeholder="Nhập mã quản trị">
+  <div class="fields" id="tagFields"></div>
+  <div class="actions"><button class="btn" id="saveBtn">Save & Sync</button><button class="btn secondary" id="refreshBtn">Refresh now</button></div>
+  <div id="adminMessage" class="message"></div>
+</details>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+function fmtDate(v){
+  if(!v) return "Chưa có";
+  const d=new Date(v);
+  return Number.isNaN(d.getTime()) ? "Chưa có" :
+    d.toLocaleString("vi-VN",{timeZone:"Asia/Ho_Chi_Minh",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
+}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+async function load(){
+ try{
+  const r=await fetch("./data/players.json",{cache:"no-store"});
+  if(!r.ok) throw new Error(`HTTP ${r.status}`);
+  const data=await r.json();
+  const players=Array.isArray(data.players)?data.players:[];
+  $("count").textContent=`${data.configuredCount ?? players.length} / 10`;
+  $("updated").textContent=fmtDate(data.lastUpdated);
+  $("refreshText").textContent="Schedule: 11:55 & 23:55 (Vietnam)";
+  const valid=players.filter(p=>p.trophies!==null && p.trophies!==undefined);
+  $("highest").textContent=valid.length?Number(valid[0].trophies).toLocaleString("en-US"):"—";
+  if(!players.length){
+    $("rows").innerHTML='<tr><td colspan="5"><div class="empty"><b>Chưa có dữ liệu người chơi</b>Workflow sẽ hiển thị bảng sau lần đồng bộ đầu tiên.</div></td></tr>';
+  } else {
+    $("rows").innerHTML=players.map((p,i)=>`<tr title="${esc(p.error||"")}">
+      <td class="rank ${i===0?"top1":""}">${String(i+1).padStart(2,"0")}${i===0?" 🥇":i===1?" 🥈":i===2?" 🥉":""}</td>
+      <td><div class="player"><div class="avatar">${esc((p.name||"?").slice(0,2).toUpperCase())}</div><div>${esc(p.name||"Unknown")}<div class="tag">${esc(p.tag||"")}</div></div></div></td>
+      <td class="league">${esc(p.league||"—")}</td><td class="trophies">${p.trophies==null?"—":Number(p.trophies).toLocaleString("en-US")}</td>
+      <td class="status ${p.status==="ok"?"":p.status}">${p.status==="ok"?"Updated":p.status==="stale"?"Stale":"Error"}</td></tr>`).join("");
+  }
+  $("statusText").textContent=data.error || "Dữ liệu được đồng bộ tự động hai lần mỗi ngày. Thời gian hiển thị theo giờ Việt Nam.";
+ }catch(e){
+  $("statusText").textContent="Không thể tải snapshot dữ liệu. Vui lòng thử tải lại trang sau.";
+  $("rows").innerHTML='<tr><td colspan="5"><div class="empty"><b>Chưa tải được dữ liệu</b>Kiểm tra file docs/data/players.json và lần chạy GitHub Actions gần nhất.</div></td></tr>';
+ }
+}
+load();
+</script>
+</body>
+</html>
