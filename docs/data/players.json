@@ -1,6 +1,18 @@
 {
   "players": [
     {
+      "tag": "#999PVVU2Y",
+      "name": "\"S1kurumi1S\"",
+      "trophies": 1406,
+      "bestTrophies": 6119,
+      "townHallLevel": 19,
+      "expLevel": 275,
+      "league": "Unranked",
+      "clan": "☆Hắc Phong Hội☆",
+      "fetchedAt": "2026-11-20T22:50:34.577Z",
+      "status": "ok"
+    },
+    {
       "tag": "#2JJQV8C29",
       "name": "DiNo",
       "trophies": 1344,
@@ -8,32 +20,32 @@
       "townHallLevel": 19,
       "expLevel": 270,
       "league": "Unranked",
-      "clan": "Nhà Có Cô E Gái",
-      "fetchedAt": "2026-11-20T13:39:32.351Z",
+      "clan": "☆Hắc Phong Hội☆",
+      "fetchedAt": "2026-11-20T22:50:35.207Z",
       "status": "ok"
     },
     {
       "tag": "#8V8LQJPLV",
       "name": "⭐️Chí⭐️Tình⭐️",
-      "trophies": 1287,
+      "trophies": 1314,
       "bestTrophies": 6125,
       "townHallLevel": 19,
       "expLevel": 272,
       "league": "Unranked",
       "clan": "☆Hắc Phong Hội☆",
-      "fetchedAt": "2026-11-20T13:39:33.526Z",
+      "fetchedAt": "2026-11-20T22:50:36.539Z",
       "status": "ok"
     },
     {
       "tag": "#2U9V2QY98",
       "name": "VNL ThiMap✨",
-      "trophies": 1178,
+      "trophies": 1194,
       "bestTrophies": 6401,
       "townHallLevel": 19,
       "expLevel": 278,
       "league": "Unranked",
       "clan": "♡BỞI VÌ ĐAM MÊ♡",
-      "fetchedAt": "2026-11-20T13:39:35.849Z",
+      "fetchedAt": "2026-11-20T22:50:39.080Z",
       "status": "ok"
     },
     {
@@ -45,43 +57,31 @@
       "expLevel": 248,
       "league": "Unranked",
       "clan": "HELLO VIET NAM",
-      "fetchedAt": "2026-11-20T13:39:35.204Z",
+      "fetchedAt": "2026-11-20T22:50:38.310Z",
       "status": "ok"
     },
     {
       "tag": "#8QGUJVJU0",
       "name": "☆HPH☆Đức LK✅",
-      "trophies": 1094,
+      "trophies": 1112,
       "bestTrophies": 6291,
       "townHallLevel": 19,
       "expLevel": 279,
       "league": "Unranked",
       "clan": "☆Hắc Phong Hội☆",
-      "fetchedAt": "2026-11-20T13:39:34.648Z",
+      "fetchedAt": "2026-11-20T22:50:37.752Z",
       "status": "ok"
     },
     {
       "tag": "#L2V82V90P",
       "name": "☆HPH❤ThànhXL52✅",
-      "trophies": 633,
+      "trophies": 769,
       "bestTrophies": 5263,
       "townHallLevel": 19,
       "expLevel": 258,
       "league": "Unranked",
       "clan": "☆Hắc Phong Hội☆",
-      "fetchedAt": "2026-11-20T13:39:34.083Z",
-      "status": "ok"
-    },
-    {
-      "tag": "#999PVVU2Y",
-      "name": "\"S1kurumi1S\"",
-      "trophies": 255,
-      "bestTrophies": 6119,
-      "townHallLevel": 19,
-      "expLevel": 275,
-      "league": "Unranked",
-      "clan": "Nhà Có Cô E Gái",
-      "fetchedAt": "2026-11-20T13:39:31.570Z",
+      "fetchedAt": "2026-11-20T22:50:37.102Z",
       "status": "ok"
     },
     {
@@ -93,13 +93,13 @@
       "expLevel": 232,
       "league": "Unranked",
       "clan": "☆Hắc Phong Hội☆",
-      "fetchedAt": "2026-11-20T13:39:32.982Z",
+      "fetchedAt": "2026-11-20T22:50:35.936Z",
       "status": "ok"
     }
   ],
   "configuredCount": 8,
-  "lastUpdated": "2026-11-20T13:39:36.249Z",
-  "lastAttempt": "2026-11-20T13:39:31.310Z",
+  "lastUpdated": "2026-11-20T22:50:39.480Z",
+  "lastAttempt": "2026-11-20T22:50:34.235Z",
   "schedule": "11:55 và 23:55 mỗi ngày (giờ Việt Nam)",
   "error": null
 }
